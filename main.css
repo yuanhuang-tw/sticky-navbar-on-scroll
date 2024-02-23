@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+
+  backdrop-filter: blur(0);
+
+  transition: all 0.6s;
+}
+nav .logo {
+  color: #fff;
+  font-size: 3.125rem;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  padding: 0.75rem 1.75rem;
+
+  color: #fff;
+  font-size: 1.375rem;
+  text-decoration: none;
+
+  border-radius: 4px;
+
+  transition: all 0.4s;
+}
+nav ul li a:hover {
+  color: #000;
+  background-color: rgb(255 255 255 / 0.2);
+}
+
+.banner {
+  height: 200svh;
+
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+nav.my-sticky-nav {
+  padding: 0.75rem 6rem;
+
+  backdrop-filter: blur(50px);
+}
+.logo.my-sticky-logo {
+  font-size: 2.5rem;
+}
+.links.my-sticky-links a {
+  font-size: 1.25rem;
+}
