@@ -18,6 +18,8 @@ window.addEventListener('scroll', () => {
 });
 
 hamburgerMenu.addEventListener('click', () => {
-  console.log('hamburgerMenu');
   hamburgerMenu.classList.toggle('open');
+
+  links.style.top = `${nav.clientHeight}px`;
+  links.classList.toggle('active');
 });
