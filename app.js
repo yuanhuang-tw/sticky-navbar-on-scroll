@@ -31,9 +31,11 @@ links.addEventListener('click', (e) => {
     const ta = e.target.href.split('#')[1];
     const targetPosition = document.querySelector(`#${ta}`).offsetTop;
 
-    window.scrollTo(0, targetPosition - navHeight);
-
     hamburgerMenu.classList.remove('open');
     links.classList.remove('active');
+
+    setTimeout(() => {
+      window.scrollTo(0, targetPosition - navHeight);
+    }, 300);
   }
 });
