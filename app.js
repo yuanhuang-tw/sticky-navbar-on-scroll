@@ -23,3 +23,17 @@ hamburgerMenu.addEventListener('click', () => {
   links.style.top = `${nav.clientHeight}px`;
   links.classList.toggle('active');
 });
+
+links.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    e.preventDefault();
+
+    const ta = e.target.href.split('#')[1];
+    const targetPosition = document.querySelector(`#${ta}`).offsetTop;
+
+    window.scrollTo(0, targetPosition - navHeight);
+
+    hamburgerMenu.classList.remove('open');
+    links.classList.remove('active');
+  }
+});
