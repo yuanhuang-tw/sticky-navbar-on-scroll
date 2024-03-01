@@ -6,6 +6,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  background-image: url('bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 nav {
@@ -53,13 +58,18 @@ nav .logo.my-sticky-logo {
   /* 捲軸往下移動 */
   font-size: 2.5rem;
 }
+nav .logo a {
+  color: #fff;
+
+  text-decoration: none;
+}
 
 /* hamburger-menu */
 nav .hamburger-menu {
   display: flex;
   align-items: center;
   width: 2rem;
-  padding: 6px;
+  padding: 6px 0;
 
   cursor: pointer;
 }
@@ -147,10 +157,10 @@ nav ul.active {
   max-height: 500px;
 }
 nav ul li:first-child {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 nav ul li:last-child {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
   nav ul {
@@ -181,9 +191,9 @@ nav ul li a {
 
   color: #fff;
   font-size: 1.375rem;
-  text-decoration: none;
 
-  border-radius: 4px;
+  text-decoration: none;
+  border-radius: 8px;
 
   transition: all 0.4s;
 }
@@ -196,18 +206,28 @@ nav ul.my-sticky-links a {
   font-size: 1.25rem;
 }
 @media screen and (max-width: 1023px) {
+  nav ul {
+    background-image: url('bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   nav ul li a,
   nav ul.my-sticky-links a {
     font-size: 1.75rem;
   }
 }
 
-/* banner */
-.banner {
-  height: 200svh;
+/* main */
+.main {
+  max-width: 960px;
+  margin: 0 auto 60px;
+}
 
-  background-image: url('bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.main section {
+  margin-bottom: 40px;
+  padding: 30px;
+
+  font-size: 18px;
+  line-height: 1.5;
 }

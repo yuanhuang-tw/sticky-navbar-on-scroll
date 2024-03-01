@@ -1,9 +1,10 @@
-const nav = document.querySelector('nav');
 const logo = document.querySelector('.logo');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const links = document.querySelector('.links');
 
-const navHeight = nav.offsetHeight;
+document.querySelector('html').style.scrollPaddingTop = `${
+  navHeight - navHeight / 3
+}px`;
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > navHeight) {
@@ -15,6 +16,8 @@ window.addEventListener('scroll', () => {
     logo.classList.remove('my-sticky-logo');
     links.classList.remove('my-sticky-links');
   }
+
+  links.style.top = `${nav.clientHeight}px`;
 });
 
 hamburgerMenu.addEventListener('click', () => {
@@ -26,16 +29,7 @@ hamburgerMenu.addEventListener('click', () => {
 
 links.addEventListener('click', (e) => {
   if (e.target.tagName === 'A') {
-    e.preventDefault();
-
-    const ta = e.target.href.split('#')[1];
-    const targetPosition = document.querySelector(`#${ta}`).offsetTop;
-
     hamburgerMenu.classList.remove('open');
     links.classList.remove('active');
-
-    setTimeout(() => {
-      window.scrollTo(0, targetPosition - navHeight);
-    }, 300);
   }
 });
