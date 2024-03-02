@@ -27,10 +27,14 @@
 
     <script>
       const nav = document.querySelector('nav');
-      let navHeight = nav.clientHeight;
+      let navHeight = nav.offsetHeight;
 
       document.querySelector('body').style.paddingTop = `${
-        navHeight + navHeight / 10
+        navHeight + navHeight / 30
+      }px`;
+
+      document.querySelector('html').style.scrollPaddingTop = `${
+        navHeight - navHeight / 3
       }px`;
     </script>
 
