@@ -12,6 +12,8 @@ window.addEventListener('scroll', () => {
     logo.classList.remove('my-sticky-logo');
     links.classList.remove('my-sticky-links');
   }
+
+  setLinksTop();
 });
 
 hamburgerMenu.addEventListener('click', () => {
@@ -28,10 +30,12 @@ links.addEventListener('click', (e) => {
   }
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener('resize', setLinksTop);
+
+function setLinksTop() {
   if (window.innerWidth < 1024) {
     links.style.top = `${nav.offsetHeight}px`;
   } else {
     links.style.top = '0px';
   }
-});
+}
