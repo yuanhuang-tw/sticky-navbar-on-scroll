@@ -31,8 +31,8 @@ nav.my-sticky-nav {
   /* 捲軸往下移動 */
   padding: 20px;
 
-  -webkit-backdrop-filter: blur(50px);
-  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
 }
 @media screen and (min-width: 1024px) {
   nav.my-sticky-nav {
@@ -138,12 +138,12 @@ nav .hamburger-menu.open span::after {
 /* links */
 nav ul {
   position: fixed;
-  left: 0;
   right: 0;
 
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
+  width: 50%;
   max-height: 0;
   margin: 0;
   padding: 0;
@@ -207,11 +207,9 @@ nav ul.my-sticky-links a {
 }
 @media screen and (max-width: 1023px) {
   nav ul {
-    background-image: url('bg2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: rgb(0 0 0 / 0.4);
   }
+
   nav ul li a,
   nav ul.my-sticky-links a {
     font-size: 1.75rem;
@@ -220,7 +218,7 @@ nav ul.my-sticky-links a {
 
 /* main */
 .main {
-  max-width: 960px;
+  max-width: 900px;
   margin: 0 auto 60px;
 }
 
