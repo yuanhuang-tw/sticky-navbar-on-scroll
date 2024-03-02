@@ -143,7 +143,6 @@ nav ul {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  width: 50%;
   max-height: 0;
   margin: 0;
   padding: 0;
@@ -207,6 +206,8 @@ nav ul.my-sticky-links a {
 }
 @media screen and (max-width: 1023px) {
   nav ul {
+    width: 50%;
+
     background-color: rgb(0 0 0 / 0.4);
   }
 
