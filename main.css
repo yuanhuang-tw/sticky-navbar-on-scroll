@@ -7,6 +7,11 @@ body {
   padding: 0;
   box-sizing: border-box;
 
+  color: #212529;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
   background-image: url('bg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -152,7 +157,7 @@ nav ul {
   list-style: none;
 
   overflow-y: hidden;
-  transition: max-height 0.6s 0.2s;
+  transition: max-height 0.6s;
 }
 nav ul.active {
   max-height: 500px;
@@ -169,10 +174,10 @@ nav ul li:last-child {
 
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 1.5rem;
     /* 連結的最後一個項目貼齊最右側 */
     margin-right: -26px;
-    max-height: 100px;
 
     overflow-y: visible;
   }
@@ -198,8 +203,9 @@ nav ul li a {
 
   transition: all 0.4s;
 }
-nav ul li a:hover {
-  color: #000;
+nav ul li a:hover,
+nav ul li a.current {
+  color: #212529;
   background-color: rgb(255 255 255 / 0.2);
 }
 nav ul.my-sticky-links a {
@@ -208,14 +214,22 @@ nav ul.my-sticky-links a {
 }
 @media screen and (max-width: 1023px) {
   nav ul {
-    width: 50%;
+    width: 100%;
 
-    background-color: rgb(0 0 0 / 0.75);
+    background-color: rgb(0 0 0 / 0.6);
   }
 
   nav ul li a,
   nav ul.my-sticky-links a {
     font-size: 1.75rem;
+  }
+
+  nav ul li a:hover {
+    color: #e1e3e6;
+  }
+
+  nav ul li a.current {
+    color: #fff;
   }
 }
 
@@ -229,6 +243,6 @@ nav ul.my-sticky-links a {
   margin-bottom: 40px;
   padding: 30px;
 
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5;
 }
